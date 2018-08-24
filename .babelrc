@@ -1,0 +1,4 @@
+{
+  "presets": ["babel-preset-env", "react", "stage-1"],
+  "plugins": ["transform-react-constant-elements"]
+}

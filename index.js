@@ -2,7 +2,7 @@
 // Load dependencies
 const express = require('express');
 const bodyParser = require('body-parser');
-const mountRoutes = require('./routes');
+const mountRoutes = require('./server/routes');
 const mongoose = require('mongoose');
 const app = express();
 
