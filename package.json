@@ -1,0 +1,27 @@
+{
+  "name": "gitlab-ci-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-promise-router": "^3.0.3",
+    "mongoose": "^5.2.9"
+  },
+  "devDependencies": {
+    "eslint": "^5.2.0",
+    "eslint-config-strongloop": "^2.1.0",
+    "jest": "^23.4.1",
+    "nodemon": "^1.18.3"
+  },
+  "scripts": {
+    "pretest": "eslint --ignore-path .gitignore .",
+    "test": "jest",
+    "start": "node index",
+    "watch": "nodemon --use_strict index.js"
+  }
+}
