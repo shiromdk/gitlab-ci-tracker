@@ -1,6 +1,6 @@
 'use strict';
-const users = require('./webhooks');
+const webhooks = require('./webhooks');
 
 module.exports = app => {
-  app.use('/webhooks', users);
+  app.use('/webhooks', webhooks);
 };

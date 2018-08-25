@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-let schema = new mongoose.Scheme({
+let schema = new mongoose.Schema({
   name: {
     type:String,
   },
@@ -9,5 +9,9 @@ let schema = new mongoose.Scheme({
   },
   avatar_url: {
     type:String
-  },
+  }
 });
+
+const User = mongoose.model('GitlabUser',schema);
+
+module.exports = User;

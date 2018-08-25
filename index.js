@@ -11,7 +11,7 @@ require('dotenv').config();
 const options = {
   poolSize:100
 }
-mongoose.connect(process.env.TEST_URI,options).catch(err=>{
+mongoose.connect(process.env.MONGO_URI,options).catch(err=>{
   console.log(err);
 });
 
