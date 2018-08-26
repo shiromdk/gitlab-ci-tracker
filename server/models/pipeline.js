@@ -1,22 +1,25 @@
 const mongoose = require('mongoose');
 
 let schema = new mongoose.Schema({
+  _id: {
+    type:Number
+  },
   id: Number,
   ref: String,
   status: String,
   created_at: Date,
   builds:[
     {
-      type:mongoose.Schema.Types.ObjectId,
+      type:String,
       ref:'GitlabBuild'
     }
   ],
   user:{
-    type:mongoose.Schema.Types.ObjectId,
+    type:String,
     ref:'GitlabUser'
   },
   project:{
-    type:mongoose.Schema.Types.ObjectId,
+    type:String,
     ref:'GitlabProject'
   }
 

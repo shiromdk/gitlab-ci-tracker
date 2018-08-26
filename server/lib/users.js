@@ -12,6 +12,8 @@ const createOrUpdateUser = (req) => {
       user.save()
     }else{
       let newUser = new User({
+        '_id':req.body.user.username,
+        'id':req.body.user.username,
         'username':req.body.user.username,
         'name':req.body.user.name,
         'avatar_url':req.body.user.avatar_url

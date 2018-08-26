@@ -16,6 +16,7 @@ const createOrUpdateProject = (req) => {
       }
       else{
         let newProject = new Project({
+          '_id': req.body.project.id,
           'id':req.body.project.id,
           'name':req.body.project.name,
           'description':req.body.project.description,

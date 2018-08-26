@@ -1,9 +1,9 @@
 const Build = require('../models/build')
 
-const createOrUpdateBuild = (req) => {
+const createOrUpdateBuild = async(req) => {
   let builds = req.body.builds
   for(let build of builds){
-    Build.findOne({
+    let cBuild = await Build.findOne({
       'id':build.id
     })
     .exec()
@@ -18,6 +18,7 @@ const createOrUpdateBuild = (req) => {
       }else{
         let newBuild = new Build({
           'id':build.id,
+          '_id':build.id,
           'stage':build.stage,
           'name':build.name,
           'created_at':build.created_at,
@@ -28,8 +29,12 @@ const createOrUpdateBuild = (req) => {
       }
     })
   }
+}
+
+const createOrUpdateSingleBuild = (build) => {
 
 }
 module.exports = {
-  createOrUpdateBuild:createOrUpdateBuild
+  createOrUpdateBuild:createOrUpdateBuild,
+  createOrUpdateSingleBuild:createOrUpdateSingleBuild
 }
